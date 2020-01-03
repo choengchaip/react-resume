@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import LeftSideBar from "./components/LeftSideBar";
+import Content from './components/Content';
 import './App.css';
+import PageController from "./components/PageController";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    pageProcess = () => {
+        this.refs.pageController.pageProcess();
+    }
+
+    render() {
+        return (
+            <div className={'app-container'}>
+                <LeftSideBar pageChange={this.pageProcess} />
+                <Content/>
+                <PageController ref={'pageController'}/>
+            </div>
+        );
+    }
 }
 
 export default App;

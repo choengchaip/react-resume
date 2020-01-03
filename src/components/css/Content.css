@@ -1,0 +1,13 @@
+.content-container{
+    height: 100vh;
+    width: calc(100vw - 3em);
+    overflow: hidden;
+    position: relative;
+}
+
+@media only screen and (max-width: 568px) {
+    .content-container{
+        overflow: unset;
+        width: 100vw;
+    }
+}

@@ -1,0 +1,21 @@
+#pagecontroller{
+    height: 100vh;
+    width: calc(100vw - 3em);
+    background-color: black;
+    top: 0;
+    right: 0;
+    z-index: 998;
+    position: absolute;
+    display: block;
+}
+
+.page-active{
+    opacity: 1;
+    transition: all 0.8s ease-in;
+}
+
+.page-inactive{
+    opacity: 0;
+    transition: all 1s ease-in;
+    visibility: hidden;
+}
